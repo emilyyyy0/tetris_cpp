@@ -244,3 +244,62 @@ char mPieces[7 /* kind */][4 /*possible rotations*/][5][5] = // store each piece
         }
     }
 }; 
+
+// Each piece must be correctly positioned every time it is created on the top of the screen. 
+// It needs to be translated to the correct position 
+// We want to shot ONLY one row of blocks in the board and to be centered, upper blocks should be OUTSIDE the board. 
+// Each piece is different, therefore each one needs a different translation every time it is created. 
+// We will sotre there translation in another array, one translation per rotated piece. 
+// Displacement of the piece to the position where it is first drawn in the board when it is created. 
+int mPiecesInitialPosition [7 /* kind */][4 /* rotation */][ 2 /* position */] = 
+{
+    /* Square */
+  {
+	{-2, -3}, 
+    {-2, -3},
+    {-2, -3},
+    {-2, -3}
+   },
+/* I */
+  {
+	{-2, -2}, //horizontal 
+    {-2, -3}, // vertical
+    {-2, -2}, // horizontal 
+    {-2, -3} // vertical 
+   },
+/* L */
+  {
+	{-2, -3},
+    {-2, -3},
+    {-2, -3},
+    {-2, -2}
+   },
+/* L mirrored */
+  {
+	{-2, -3},
+    {-2, -2},
+    {-2, -3},
+    {-2, -3}
+   },
+/* N */
+  {
+	{-2, -3},
+    {-2, -3},
+    {-2, -3},
+    {-2, -2}
+   },
+/* N mirrored */
+  {
+	{-2, -3},
+    {-2, -3},
+    {-2, -3},
+    {-2, -2}
+   },
+/* T */
+  {
+	{-2, -3},
+    {-2, -3},
+    {-2, -3},
+    {-2, -2}
+   },
+}; 
