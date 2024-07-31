@@ -349,6 +349,6 @@ Parameters:
 >> pRotation: 1 of the 4 possible rotations
 ======================================================================================
 */
-int Pieces::GetInitialYPosition(int pPiece, int pRotation) {
+int Pieces::GetYInitialPosition(int pPiece, int pRotation) {
     return mPiecesInitialPosition[pPiece][pRotation][1];
 }
