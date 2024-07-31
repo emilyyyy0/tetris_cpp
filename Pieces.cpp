@@ -303,3 +303,52 @@ int mPiecesInitialPosition [7 /* kind */][4 /* rotation */][ 2 /* position */] =
     {-2, -2}
    },
 }; 
+
+
+/*
+=====================================================================================
+Return the type of a block (0 = no-block, 1 = normal block, 2 = pivot block)
+
+Parameters:
+
+>> pPiece: Piece to draw
+>> pRotation: 1 of the 4 possible rotations
+>> pX: Horizontal position of blocks 
+>> pY: Vertical position of blocks 
+======================================================================================
+*/
+int Pieces::GetBlockType(int pPiece, int pRotation, int pX, int pY) 
+{
+    return mPieces[pPiece][pRotation][pX][pY];
+}
+
+/*
+=====================================================================================
+Returns the horizontal displacement that has to be applied to the piece in order to 
+create it in the correct position 
+
+Parameters:
+
+>> pPiece: Piece to draw
+>> pRotation: 1 of the 4 possible rotations
+======================================================================================
+*/
+int Pieces::GetXInitialPosition(int pPiece, int pRotation) {
+    return mPiecesInitialPosition[pPiece][pRotation][0];
+}
+
+
+/*
+=====================================================================================
+Returns the vertical displacement that has to be applied to the piece in order to 
+create it in the correct position 
+
+Parameters:
+
+>> pPiece: Piece to draw
+>> pRotation: 1 of the 4 possible rotations
+======================================================================================
+*/
+int Pieces::GetInitialYPosition(int pPiece, int pRotation) {
+    return mPiecesInitialPosition[pPiece][pRotation][1];
+}
