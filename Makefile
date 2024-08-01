@@ -5,7 +5,7 @@ LDFLAGS = -L/opt/homebrew/lib
 LIBS = -lSDL2 -lSDL2_gfx
 
 TARGET = sdl_test
-SOURCE = sdl_test.cpp Pieces.cpp
+SOURCE = sdl_test.cpp Pieces.cpp Board.cpp
 
 all: $(TARGET)
 
