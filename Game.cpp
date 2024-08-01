@@ -122,7 +122,7 @@ void Game::DrawPiece (int pX, int pY, int pPiece, int pRotation)
     for (int i = 0; i < PIECE_BLOCKS; i++) {
         for (int j = 0; j < PIECE_BLOCKS; j++) {
             // Get the type of the block and draw it with the correct color 
-            switch (mPiece->GetBlockType(pPiece, pRotation, j, i))
+            switch (mPieces->GetBlockType(pPiece, pRotation, j, i))
             {
                 case 1: mColor = GREEN; break; // For each block of the piece except the pivot 
                 case 2: mColor = BLUE; break; // For the pivot

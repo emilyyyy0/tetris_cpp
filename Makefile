@@ -4,8 +4,8 @@ INCLUDES = -I/opt/homebrew/include
 LDFLAGS = -L/opt/homebrew/lib
 LIBS = -lSDL2 -lSDL2_gfx -lSDL
 
-TARGET = sdl_test
-SOURCE = sdl_test.cpp Pieces.cpp Board.cpp Game.cpp IO.cpp
+TARGET = tetris
+SOURCE = Pieces.cpp Board.cpp Game.cpp IO.cpp main.cpp
 
 all: $(TARGET)
 

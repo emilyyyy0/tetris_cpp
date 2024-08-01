@@ -35,13 +35,13 @@ class Game
         int mNextPiece, mNextRotation; // Kind and rotation of the next piece 
 
         Board *mBoard; 
-        Piece *mPieces; 
+        Pieces *mPieces; 
         IO *mIO; 
 
         int GetRand(int pA, int pB); 
         void InitGame(); 
         void DrawPiece(int pX, int pY, int pPeice, int pRotation); 
         void DrawBoard();  
-}
+};
 
 #endif // _GAME_

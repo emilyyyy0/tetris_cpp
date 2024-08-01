@@ -3,14 +3,10 @@
 #ifndef _IO_
 #define _IO_
 
-// ----- Includes -----
+// ------ Includes -----
 
-#include <SDL2/SDL.h>							
-#include "SDL/SDL_gfxPrimitives.h"
-
-#pragma comment (lib, "SDL/lib/SDL.lib")
-#pragma comment (lib, "SDL/SDL_GfxPrimitives/SDL_GfxPrimitives_Static.lib")
-
+#include <SDL2/SDL.h>
+#include <SDL2/SDL2_gfxPrimitives.h>
 
 // ------ Enums -----
 
