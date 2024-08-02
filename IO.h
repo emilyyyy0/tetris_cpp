@@ -27,7 +27,7 @@ class IO
         int Pollkey(); 
         int Getkey(); 
         int IsKeyDown(int pKey); 
-        void UpdateScreen(); 
+        void UpdateScreen(); // the same as PresentScreen() 
         void PresentScreen(); 
 }; 
 
