@@ -24,6 +24,7 @@ class Game
         
         void DrawScene();
         void CreateNewPiece(); 
+        void DrawBoard(); 
 
         int mPosX, mPosY;  // Position of the piece that is falling down 
         int mPiece, mRotation;  // Kind and rotation of the piece that is falling down 
@@ -41,7 +42,7 @@ class Game
         int GetRand(int pA, int pB); 
         void InitGame(); 
         void DrawPiece(int pX, int pY, int pPeice, int pRotation); 
-        void DrawBoard();  
+        //void DrawBoard();  
 };
 
 #endif // _GAME_

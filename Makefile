@@ -5,7 +5,7 @@ LDFLAGS = -L/opt/homebrew/lib
 LIBS = -lSDL2 -lSDL2_gfx -lSDL
 
 TARGET = tetris
-SOURCE = Pieces.cpp Board.cpp Game.cpp IO.cpp main.cpp
+SOURCE = Pieces.cpp Board.cpp Game.cpp IO.cpp Main.cpp
 
 all: $(TARGET)
 
