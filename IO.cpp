@@ -91,6 +91,58 @@ int IO::GetScreenHeight()
 
 /* 
 ======================================									
+Update screen
+====================================== 
+*/
+void IO::UpdateScreen()
+{
+    SDL_RenderPresent(mRenderer); 
+}
+
+
+/* 
+======================================									
+Keyboard Input
+====================================== 
+*/
+int IO::Pollkey()
+{
+	SDL_Event event;
+	while ( SDL_PollEvent(&event) ) 
+	{
+		switch (event.type) {
+			case SDL_KEYDOWN:
+				return event.key.keysym.sym;
+			case SDL_QUIT:
+				exit(3);
+		}
+	}
+	return -1;
+}
+
+
+/* 
+======================================									
+Keyboard Input
+====================================== 
+*/
+int IO::Getkey() 
+{
+    SDL_Event event;
+	while (true)
+	{
+	  SDL_WaitEvent(&event);
+	  if (event.type == SDL_KEYDOWN)
+		  break;
+      if (event.type == SDL_QUIT)
+		  exit(3);
+	};
+	return event.key.keysym.sym;
+}
+
+
+/* 
+======================================									
 Keyboard Input
 
 Returns 1 for a pressed key and 0 for a released key 

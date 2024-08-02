@@ -24,10 +24,10 @@ class IO
         void ClearScreen(); 
         int GetScreenHeight(); 
         int InitGraph(); 
-        //int Pollkey(); 
-        //int Getkey(); 
+        int Pollkey(); 
+        int Getkey(); 
         int IsKeyDown(int pKey); 
-        //void UpdateScreen(); 
+        void UpdateScreen(); 
         void PresentScreen(); 
 }; 
 

@@ -36,13 +36,34 @@ int main(int argc, char* args[])
 
         // Present the rendered frame
         mIO.PresentScreen(); 
+
+        // ---- Vertical Movement ---- 
+        unsigned long mTime2 = SDL_GetTicks(); 
+
+        if ((mTime2 - mTime1) > WAIT_TIME)
+        {
+            if (mBoard.IsPossibleMovement (mGame.mPosX, mGame.mPosY + 1, mGame.mPiece, mGame.mRotation))
+            {
+                mGame.mPosY++; 
+            }
+            else 
+            {
+                mBoard.StorePiece(mGame.mPosX, mGame.mPosY, mGame.mPiece, mGame.mRotation); 
+
+                mBoard.DeletePossibleLines(); 
+
+                if (mBoard.IsGameOver())
+                {
+                    mIO.Getkey(); 
+                    exit(0); 
+                }
+                mGame.CreateNewPiece(); 
+            }
+            mTime1 = SDL_GetTicks(); 
+        }
         
     }
 
-    // Keep the window open for 5 seconds
-    //SDL_Delay(5000);
-
     return 0; 
-
 
 }
