@@ -7,3 +7,6 @@
 *.dll
 *.dylib
 *.so
+
+# Ignore all .vscode files by default
+.vscode/*
