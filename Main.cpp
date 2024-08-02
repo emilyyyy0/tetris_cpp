@@ -35,7 +35,69 @@ int main(int argc, char* args[])
         mGame.DrawScene(); // Draw staff
 
         // Present the rendered frame
-        mIO.PresentScreen(); 
+        mIO.PresentScreen();
+
+
+        // ---- Input ----- 
+        int mKey = mIO.Pollkey();  
+
+        switch (mKey)
+        {
+            case (SDLK_RIGHT):
+            {
+                if (mBoard.IsPossibleMovement (mGame.mPosX + 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
+                    mGame.mPosX++; 
+                    break; 
+            }
+
+            case (SDLK_LEFT):
+            {
+                if (mBoard.IsPossibleMovement (mGame.mPosX - 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
+					mGame.mPosX--;	
+				break;
+            }
+
+            case (SDLK_DOWN):
+			{
+				if (mBoard.IsPossibleMovement (mGame.mPosX, mGame.mPosY + 1, mGame.mPiece, mGame.mRotation))
+					mGame.mPosY++;	
+				break;
+			}
+
+            case (SDLK_x):
+			{
+				// Check collision from up to down
+				while (mBoard.IsPossibleMovement(mGame.mPosX, mGame.mPosY, mGame.mPiece, mGame.mRotation)) { mGame.mPosY++; }
+	
+				mBoard.StorePiece (mGame.mPosX, mGame.mPosY - 1, mGame.mPiece, mGame.mRotation);
+
+				mBoard.DeletePossibleLines ();
+
+				if (mBoard.IsGameOver())
+				{
+					mIO.Getkey();
+					exit(0);
+				}
+
+				mGame.CreateNewPiece();
+
+				break;
+			}
+
+			case (SDLK_z):
+			{
+				if (mBoard.IsPossibleMovement (mGame.mPosX, mGame.mPosY, mGame.mPiece, (mGame.mRotation + 1) % 4))
+					mGame.mRotation = (mGame.mRotation + 1) % 4;
+
+				break;
+			}
+
+        }
+
+
+
+
+        
 
         // ---- Vertical Movement ---- 
         unsigned long mTime2 = SDL_GetTicks(); 
