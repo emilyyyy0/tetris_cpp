@@ -1,3 +1,17 @@
+/********
+ * File: Board.cpp 
+ * 
+ * Description: Board of the game. A matrix of n x n holes
+ * The bidimensional array of n x n blocks are initialised to POS_FREE. 
+ * The pieces will be stored by filling these blocks when they fall down updating the block to POS_FILLED. 
+ * 
+ * This class implements methods to store a piece, check if a movement is possible, delete lines, etc. 
+ * 
+ * The board is flexible, where we can choose the amount of horizontal and vertical blocks and the size of each block. 
+ * 
+ */
+
+
 
 // ----- Includes -----
 

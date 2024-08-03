@@ -1,3 +1,12 @@
+/********
+ * 
+ * File: Game.h
+ * 
+ * Description: General class fo the game. 
+ * 
+ */
+
+
 
 #ifndef _GAME_
 #define _GAME_

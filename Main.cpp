@@ -1,3 +1,19 @@
+/********
+ * 
+ * File: Main.cpp
+ * 
+ * Description: Tetris Tutorial adapted from https://javilop.com/gamedev/tetris-tutorial-in-c-platform-independent-focused-in-game-logic-for-beginners/
+ * 
+ * The main loop of the game. In each frame we draw everything. 
+ * Before each movement, we first check out if it is possible, we also measure the time in order to move the piece down 
+ * every n milliseconds. 
+ * When the piece falls down one block, we check out if the movement is possible, if not, we store the piece in the board. 
+ * We also check out if there are blocks in the upper row, if so, the game is over. 
+ * 
+ * 
+ */
+
+
 
 #include "Game.h"
 #include "IO.h"

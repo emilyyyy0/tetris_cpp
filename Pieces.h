@@ -1,3 +1,11 @@
+/******
+ * File: Pieces.h
+ * Description: All the Tetris pieces with their respective rotations and displacements for the hotspot 
+ * 
+ */
+
+
+
 
 #ifndef _PIECES_
 #define _PIECES_

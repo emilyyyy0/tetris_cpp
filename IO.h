@@ -1,3 +1,14 @@
+/********
+ * 
+ * File: IO.h
+ * 
+ * Description: Class for handling input & drawing, it uses SDL2 for the rendering. 
+ * 
+ * SDL2 is used to create the window, clear it, update the screen and take care of the keyboard input. 
+ * 
+ */
+
+
 #ifndef _IO_
 #define _IO_
 

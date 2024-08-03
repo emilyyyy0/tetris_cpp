@@ -1,7 +1,15 @@
-/*
-Initialises the game, draws the board and pieces by drawning each block as a rectange
-(using another class IO that uses SDL) and creates new random pieces 
-*/
+/********
+ * 
+ * File: Game.cpp 
+ * 
+ * Description: General class for the game 
+ * Initialises the game, draws the board and pieces by drawning each block as a rectangle 
+ * (using another class IO that uses SDL) and creates new random pieces 
+ * 
+ */
+
+
+
 
 // ----- Includes -----
 #include "Game.h"

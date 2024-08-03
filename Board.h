@@ -1,4 +1,9 @@
-
+/********
+ * File: Board.h
+ * 
+ * Description: Board of the game. A matrix of n x n holes. 
+ * 
+ */
 
 #ifndef _BOARD_
 #define _BOARD_
