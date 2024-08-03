@@ -2,11 +2,15 @@
 
 Tetris written in C++ using SDL2
 
-## How to Run 
-Install the dependencies ```SDL2``` and ```SDL2_gfx```
+## Prerequisites
+- ```g++```
+- ```SDL_2```
+- ```SDL2_gfx```
 
-Edit the Makefile, then run ```make clean && make ```.
+## Building the Game 
+To build the game, edit the Makefile, then run ```make clean && make ```.
 
+## Running the Game
 To run the program: ```make run ``` or ```./tetris```
 
 ## Keys 
@@ -16,3 +20,8 @@ To run the program: ```make run ``` or ```./tetris```
 |z | Rotate piece |
 |x | Drop Piece |
 | Left, Right, Down | As it says  |
+
+
+## Cleaning Up 
+To clean up build artifacts, run: 
+```make clean ```
