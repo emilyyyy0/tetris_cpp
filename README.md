@@ -25,3 +25,14 @@ To run the program: ```make run ``` or ```./tetris```
 ## Cleaning Up 
 To clean up build artifacts, run: 
 ```make clean ```
+
+
+## Gameplay 
+<div style="text-align: center;">
+  <img src="images/tetris_img1.png" alt="Gameplay" style="width:50%;">
+  <p><em>Figure 1: Start of the game</em></p>
+</div>
+<div style="text-align: center;">
+  <img src="images/tetris_img2.png" alt="Gameplay" style="width:50%;">
+  <p><em>Figure 2: Gameplay </em></p>
+</div>
